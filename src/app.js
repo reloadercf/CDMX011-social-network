@@ -1,5 +1,8 @@
+/* eslint-disable quotes */
+
 import { signUp, logIn } from './templates.js';
 
+const rootDiv = document.getElementById('root');
 export const routes = {
   '/': logIn,
   '/registro': signUp,
