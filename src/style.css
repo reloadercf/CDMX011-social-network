@@ -68,7 +68,7 @@ input{
     border: none;
     width: 97%;
     border-bottom: 4px solid;
-    color:gray;
+    color:#F8F7F7;
     font-size: 18px;
     border-image: linear-gradient(270deg, #1B8695 0%, rgba(137, 18, 156, 0.52) 52.08%, rgba(255, 0, 199, 0.4792) 100%) 10;
 }

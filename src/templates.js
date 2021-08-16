@@ -33,7 +33,7 @@ export const signUp = (target) => {
   toLogIn.addEventListener("click", (event) => {
     event.preventDefault();
     onNavigate("/");
-  })
+  });
 };
 
 export const logIn = (target) => {
@@ -60,12 +60,9 @@ export const logIn = (target) => {
 `;
   target.innerHTML = logInContainer;
 
-  
-  
   const toSignUp = document.getElementById("register");
   toSignUp.addEventListener("click", (event) => {
     event.preventDefault();
     onNavigate("/registro");
   });
-  
 };

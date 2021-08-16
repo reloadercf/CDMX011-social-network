@@ -13,3 +13,11 @@ export const onNavigate = (pathname) => {
   const element = routes[pathname];
   element(rootDiv);
 };
+
+const url = routes[window.location.pathname];
+url(rootDiv);
+
+window.onpopstate = () => {
+  const path = routes[window.location.pathname];
+  path(rootDiv);
+};
