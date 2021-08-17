@@ -1,18 +1,23 @@
+/* eslint-disable quotes */
 import { signUp, logIn } from './templates.js';
 
-const routes = {
+const rootDiv = document.getElementById('root');
+
+export const routes = {
   '/': logIn,
   '/registro': signUp,
 };
 
 export const onNavigate = (pathname) => {
   window.history.pushState({}, pathname, window.location.origin + pathname);
-  rootDiv.innerHTML = routes[pathname];
+  const element = routes[pathname];
+  element(rootDiv);
 };
 
+const element = routes[window.location.pathname];
+element(rootDiv);
+
 window.onpopstate = () => {
-    rootDiv.innerHTML = routes[window.location.pathname]
-}
-
-document.getElementById('root').innerHTML = logIn;
-
+  const path = routes[window.location.pathname];
+  path(rootDiv);
+};
