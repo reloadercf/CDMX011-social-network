@@ -1,5 +1,6 @@
 /* eslint-disable quotes */
-import { signUp, logIn } from './templates.js';
+import { signUp } from './components/signUp.js';
+import { logIn } from './components/logIn.js';
 
 const rootDiv = document.getElementById('root');
 
@@ -14,8 +15,8 @@ export const onNavigate = (pathname) => {
   element(rootDiv);
 };
 
-const url = routes[window.location.pathname];
-url(rootDiv);
+const element = routes[window.location.pathname];
+element(rootDiv);
 
 window.onpopstate = () => {
   const path = routes[window.location.pathname];
