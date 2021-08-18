@@ -1,5 +1,6 @@
 /* eslint-disable quotes */
-import { signUp, logIn } from './templates.js';
+import { signUp } from './components/signUp.js';
+import { logIn } from './components/logIn.js';
 
 const rootDiv = document.getElementById('root');
 
