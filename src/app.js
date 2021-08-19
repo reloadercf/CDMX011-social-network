@@ -1,12 +1,14 @@
 /* eslint-disable quotes */
 import { signUp } from './components/signUp.js';
 import { logIn } from './components/logIn.js';
+import { home } from './components/home.js';
 
 const rootDiv = document.getElementById('root');
 
 export const routes = {
   '/': logIn,
   '/registro': signUp,
+  '/home': home,
 };
 
 export const onNavigate = (pathname) => {

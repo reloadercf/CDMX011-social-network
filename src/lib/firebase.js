@@ -1,4 +1,5 @@
 /* eslint-disable quotes */
+import { onNavigate } from '../app.js';
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
@@ -28,7 +29,7 @@ const userProfile = (username) => {
 
 export const signUpWithPassword = (email, password, repeatPassword, username) => {
   if (password !== repeatPassword) {
-    alert("Las contraseñas no coinciden");
+    document.getElementById("messageError").innerText = "Las contraseñas no coinciden";
   } else {
     firebase
       .auth()
@@ -38,13 +39,14 @@ export const signUpWithPassword = (email, password, repeatPassword, username) =>
         const user = userCredential.user;
         console.log(user);
         userProfile(username);
+        onNavigate('/');
         // ...
       })
       .catch((error) => {
         const errorCode = error.code;
         console.log(errorCode);
         const errorMessage = error.message;
-        alert(errorMessage);
+        document.getElementById("messageError").innerText = errorMessage;
         // ..
       });
   }
@@ -58,13 +60,14 @@ export const logInWithUser = (email, password) => {
       // Signed in
       const user = userCredential.user;
       console.log(user);
-      alert(`Bienvenido ${user.displayName}`);
+      onNavigate('/home');
+      document.getElementById("message").innerText = `Bienvenid@ ${user.displayName}`;
     })
     .catch((error) => {
       const errorCode = error.code;
       console.log(errorCode);
       const errorMessage = error.message;
-      alert(errorMessage);
+      document.getElementById("messageError").innerText = errorMessage;
     });
 };
 
@@ -81,6 +84,8 @@ export const logInWithGoogle = () => {
       // The signed-in user info.
       const user = result.user;
       console.log(user);
+      onNavigate('/home');
+      document.getElementById("message").innerText = `Bienvenido ${user.displayName}`;
     })
     .catch((error) => {
       // Handle Errors here.

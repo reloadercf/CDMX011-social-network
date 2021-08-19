@@ -5,7 +5,7 @@ import { logInWithUser, logInWithGoogle } from "../lib/firebase.js";
 export const logIn = (target) => {
   const logInContainer = `
     <header>
-        <img src="./assets/logo.png" alt="Logo de Nova"/>
+        <img src="./assets/logo.png" alt="Logo de Nova" id="img-login"/>
     </header>
     <main>
     <form class="logIn" id="formLogIn">
@@ -17,6 +17,7 @@ export const logIn = (target) => {
       </div>
     <button class="logInButton" type="submit" id="logInButton"> Iniciar Sesión </button>    
     </form>
+    <p id="messageError"></p>
     <button class="logInGoogleButton" type="submit" id="logInGoogleButton"> <img src="./assets/google.png" alt="Ícono de Google"> Ingresar con Google </button>
     </main>
     <footer>
