@@ -30,7 +30,7 @@ export const logIn = (target) => {
   const toSignUp = document.getElementById("register");
   toSignUp.addEventListener("click", (event) => {
     event.preventDefault();
-    onNavigate("/registro");
+    onNavigate("/signUp");
   });
 
   const logInBttn = document.getElementById("logInButton");

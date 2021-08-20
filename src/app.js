@@ -7,7 +7,7 @@ const rootDiv = document.getElementById('root');
 
 export const routes = {
   '/': logIn,
-  '/registro': signUp,
+  '/signUp': signUp,
   '/home': home,
 };
 

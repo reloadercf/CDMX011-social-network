@@ -98,3 +98,15 @@ export const logInWithGoogle = () => {
       console.log(email);
     });
 };
+
+export const signOutUser = () => {
+  firebase.auth().signOut().then(() => {
+    // Sign-out successful.
+    onNavigate('/');
+  }).catch((error) => {
+    // An error happened.
+    console.log(error);
+    alert("sucedió un error, intenta de nuevo");
+  });
+};
+
