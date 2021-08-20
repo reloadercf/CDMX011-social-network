@@ -5,7 +5,7 @@ import { signUpWithPassword } from '../lib/firebase.js';
 export const signUp = (target) => {
   const signUpContainer = `
     <header>
-        <img src="./assets/logo.png" alt="Logo de Nova"/>
+        <img src="./assets/logo.png" alt="Logo de Nova" id="img-signup"/>
     </header>
     <main>
     <form class= "signUp" id="formRegister">
@@ -19,12 +19,12 @@ export const signUp = (target) => {
         <label for="passwordRepeat">Repite tu contraseña*</label><br>
         <input type="password" id="passwordRepeat" required><br>  
       </div>
-    <button class="signUpButton" type ="submit" id = "signUpButton"> Registrarse </button>
+      <p id="messageError"></p>
+      <button class="signUpButton" type ="submit" id = "signUpButton"> Registrarse </button>
     </form>
-    </main>
-    <p id="message"></p>
+    </main>    
     <footer class= "signUpFooter">
-    <a href="#" id="back" aria-label="Link para regresar"><img src="./assets/back.png" alt="Ícono para regresar"></a>
+      <a href="#" id="back" aria-label="Link para regresar"><img src="./assets/back.png" alt="Ícono para regresar"></a>
     </footer>
 `;
 
