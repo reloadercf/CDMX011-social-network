@@ -1,3 +1,5 @@
+import { onNavigate } from '../main.js';
+
 export const Welcome = () => {
   const divWelcome = document.createElement('div');
   const divHeader = document.createElement('div');
@@ -19,11 +21,11 @@ export const Welcome = () => {
 
   buttonSignUp.addEventListener('click', (e) => {
     e.preventDefault();
-    location.href = '/signup';
+    onNavigate('/signup');
   });
   buttonLogin.addEventListener('click', (e) => {
     e.preventDefault();
-    location.href = '/login';
+    onNavigate('/login');
   });
 
   divContent.appendChild(buttonLogin);

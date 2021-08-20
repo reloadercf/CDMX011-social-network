@@ -11,7 +11,8 @@ const routes = {
 };
 const target = routes[window.location.pathname];
 
-function onNavigate(pathname) {
+export function onNavigate(pathname) {
+  console.log('recibi', pathname);
   window.history.pushState(
     {},
     pathname,
@@ -20,7 +21,8 @@ function onNavigate(pathname) {
   while (rootDiv.firstChild) {
     rootDiv.removeChild(rootDiv.firstChild);
   }
-  rootDiv.appendChild(target([pathname]));
+
+  rootDiv.appendChild(routes[pathname]());
 }
 
 rootDiv.appendChild(target());
