@@ -110,3 +110,14 @@ export const signOutUser = () => {
   });
 };
 
+//const db = firebase.firestore();
+
+export const prueba = firebase.auth().onAuthStateChanged((user) => {
+  if (user) {
+    console.log(user);
+  } else if ((window.location.pathname !== '/') || (window.location.pathname !== '/signUp')) {
+    alert('No has iniciado sesión');
+    console.log('user logged out');
+    onNavigate('/');
+  }
+});

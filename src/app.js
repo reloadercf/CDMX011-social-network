@@ -2,6 +2,7 @@
 import { signUp } from './components/signUp.js';
 import { logIn } from './components/logIn.js';
 import { home } from './components/home.js';
+import { prueba } from './lib/firebase.js'
 
 const rootDiv = document.getElementById('root');
 
@@ -23,4 +24,5 @@ element(rootDiv);
 window.onpopstate = () => {
   const path = routes[window.location.pathname];
   path(rootDiv);
+  prueba();
 };
