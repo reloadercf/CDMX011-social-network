@@ -24,5 +24,5 @@ element(rootDiv);
 window.onpopstate = () => {
   const path = routes[window.location.pathname];
   path(rootDiv);
-  prueba()
+  prueba();
 };
