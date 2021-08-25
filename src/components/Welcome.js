@@ -1,4 +1,5 @@
 import { onNavigate } from '../main.js';
+import { NavBar } from './Utils/NavBar.js';
 
 export const Welcome = () => {
   const divWelcome = document.createElement('div');
@@ -28,6 +29,7 @@ export const Welcome = () => {
     onNavigate('/login');
   });
 
+  divHeader.appendChild(NavBar());
   divContent.appendChild(buttonLogin);
   divContent.appendChild(buttonSignUp);
   divHeader.appendChild(titleH1);

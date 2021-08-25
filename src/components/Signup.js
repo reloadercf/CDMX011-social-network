@@ -1,8 +1,10 @@
 import { createAccountEmail } from '../lib/services.js';
 import { onNavigate } from '../main.js';
+import { NavBar } from './Utils/NavBar.js';
 
 export const Signup = () => {
   const newDiv = document.createElement('div');
+  const divHeader = document.createElement('div');
   const containerInputs = document.createElement('div');
   const title = document.createElement('h3');
   const button = document.createElement('button');
@@ -18,7 +20,7 @@ export const Signup = () => {
 
   newDiv.classList.add('container-signup');
   containerInputs.classList.add('container-inputs');
-  title.classList.add('visible-header');
+  divHeader.classList.add('visible-header');
   title.classList.add('title');
   inputEmail.classList.add('input');
   inputPass.classList.add('input');
@@ -29,10 +31,12 @@ export const Signup = () => {
     createAccountEmail(inputEmail.value, inputPass.value, onNavigate);
   });
 
-  newDiv.appendChild(title);
+  divHeader.appendChild(NavBar());
+  divHeader.appendChild(title);
   containerInputs.appendChild(inputEmail);
   containerInputs.appendChild(inputPass);
   containerInputs.appendChild(button);
+  newDiv.appendChild(divHeader);
   newDiv.appendChild(containerInputs);
 
   return newDiv;
