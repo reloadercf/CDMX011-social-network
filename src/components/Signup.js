@@ -2,6 +2,8 @@ import { createAccountEmail } from '../lib/services.js';
 
 export const Signup = () => {
   const newDiv = document.createElement('div');
+  const containerInputs = document.createElement('div');
+  const title = document.createElement('h3');
   const button = document.createElement('button');
   const inputEmail = document.createElement('input');
   const inputPass = document.createElement('input');
@@ -9,18 +11,28 @@ export const Signup = () => {
   inputEmail.type = 'email';
   inputPass.type = 'password';
   inputEmail.placeholder = 'email';
-  inputPass.placeholder = '* * * * *';
-  newDiv.textContent = 'Crea una cuenta';
+  inputPass.placeholder = 'contraseña';
+  title.textContent = 'Crea una cuenta';
   button.textContent = 'Guardar';
+
+  newDiv.classList.add('container-signup');
+  containerInputs.classList.add('container-inputs');
+  title.classList.add('visible-header');
+  title.classList.add('title');
+  inputEmail.classList.add('input');
+  inputPass.classList.add('input');
+  button.classList.add('button-primary');
 
   button.addEventListener('click', (e) => {
     e.preventDefault();
     createAccountEmail(inputEmail.value, inputPass.value);
   });
 
-  newDiv.appendChild(inputEmail);
-  newDiv.appendChild(inputPass);
-  newDiv.appendChild(button);
+  newDiv.appendChild(title);
+  containerInputs.appendChild(inputEmail);
+  containerInputs.appendChild(inputPass);
+  containerInputs.appendChild(button);
+  newDiv.appendChild(containerInputs);
 
   return newDiv;
 };

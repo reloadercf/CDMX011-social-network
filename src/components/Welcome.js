@@ -17,7 +17,7 @@ export const Welcome = () => {
 
   buttonLogin.textContent = 'Iniciar sesión';
   buttonSignUp.textContent = 'Registrate';
-  titleH1.textContent = 'Red Social';
+  titleH1.textContent = 'Negocios Remotos';
 
   buttonSignUp.addEventListener('click', (e) => {
     e.preventDefault();
