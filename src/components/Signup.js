@@ -1,4 +1,5 @@
 import { createAccountEmail } from '../lib/services.js';
+import { onNavigate } from '../main.js';
 
 export const Signup = () => {
   const newDiv = document.createElement('div');
@@ -25,7 +26,7 @@ export const Signup = () => {
 
   button.addEventListener('click', (e) => {
     e.preventDefault();
-    createAccountEmail(inputEmail.value, inputPass.value);
+    createAccountEmail(inputEmail.value, inputPass.value, onNavigate);
   });
 
   newDiv.appendChild(title);
