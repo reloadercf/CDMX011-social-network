@@ -9,10 +9,30 @@ h1{
     padding: 0;
     margin: 5px;
     font-family: 'Raleway', sans-serif;
+    background-color: rgba(236, 243, 250, 0.438);
+    height:40px;
 }
 
+h3{ 
+    padding: 15px;
+    font-family: 'Raleway', sans-serif;
+    size:3rem;
+    background-color: rgba(236, 243, 250, 0.438);
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height:50px;
+    background-color:black;
+    text-align: center;
+  }
+
+
 #header{
-    background-image: url('./assets/header.jpeg');
+    background-image: url('./assets/header.jpg');
     background-repeat: no-repeat;
     background-size:cover;
     display: flex;
@@ -28,6 +48,15 @@ h1{
     align-items: center;
 }
 
+.visible-header{
+    background-image: url('./assets/header.jpg');
+    background-repeat: no-repeat;
+    background-size:cover;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    height: 30vh;
+}
 .button-welcome {
     background-color: white;
     color: black;
@@ -40,3 +69,42 @@ h1{
     width: 250px;
     font-family: 'Raleway', sans-serif;
   }
+
+.container-signup{
+    display: flex;
+    flex-direction: column;
+}
+
+.container-inputs{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input{
+    margin-top: 5px;
+    margin-bottom: 25px;
+    width: 70%;
+    border: none;
+    border-bottom: 1px solid black;
+    font-size:20px;
+}
+
+.button-primary {
+    background-color: black;
+    color: white;
+    border-radius: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    width: 200px;
+    height:40px;
+    font-family: 'Raleway', sans-serif;
+  }
+
+.container-div-footer{
+    color: white;
+    margin-top: 10px;
+    font-family: 'Raleway', sans-serif;
+    size:1rem;
+}
