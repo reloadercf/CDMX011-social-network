@@ -53,3 +53,27 @@ export const loginWithEmail = (email, pass, functionRedirect) => {
       });
     });
 };
+
+export const loginWithGoogle = () => {
+  const provider = new firebase.auth.GoogleAuthProvider();
+  firebase.auth().signInWithRedirect(provider);
+  firebase.auth()
+    .getRedirectResult()
+    .then((result) => {
+      if (result.credential) {
+      /** @type {firebase.auth.OAuthCredential} */
+      }
+    })
+    .catch((error) => {
+    // Handle Errors here.
+      const errorCode = error.code;
+      const errorMessage = error.message;
+      Swal.fire({
+        title: `Error ${errorCode}`,
+        text: errorMessage,
+        icon: 'error',
+        confirmButtonText: 'Continuar',
+      });
+    // ...
+    });
+};
