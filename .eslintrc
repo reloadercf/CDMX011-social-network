@@ -28,6 +28,7 @@
     "jest/prefer-to-have-length": "warn",
     "jest/valid-expect": "error",
     "no-restricted-globals":"off",
-    "import/no-cycle":"off"
+    "import/no-cycle":"off",
+    "no-nested-ternary":"off"
   }
 }
