@@ -122,10 +122,19 @@ footer {
     border-radius: 12px;
     font-size: 18px;
     font-weight: bold;
-    width: 200px;
+    width: 270px;
     height:40px;
     font-family: 'Raleway', sans-serif;
+    margin-top: 5px;
+    margin-bottom:30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
+.google{
+    width:25px; 
+    height:25px;
+}
 
 .container-div-footer{
     color: white;

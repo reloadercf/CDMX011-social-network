@@ -1,4 +1,5 @@
 import { onNavigate } from '../../main.js';
+import { signOutApp } from '../../lib/services.js';
 
 export const NavBar = () => {
   const navBar = document.createElement('div');
@@ -14,12 +15,12 @@ export const NavBar = () => {
 
   logo.addEventListener('click', (e) => {
     e.preventDefault();
-    onNavigate('/');
+    onNavigate('/home');
   });
 
   logout.addEventListener('click', (e) => {
     e.preventDefault();
-    onNavigate('/');
+    signOutApp(onNavigate);
   });
 
   navBar.appendChild(logo);

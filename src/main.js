@@ -12,7 +12,7 @@ const routes = {
   '/home': Home,
 };
 
-export function onNavigate(pathname) {
+export const onNavigate = (pathname) => {
   window.history.pushState(
     {},
     pathname,
@@ -23,7 +23,16 @@ export function onNavigate(pathname) {
   }
 
   rootDiv.appendChild(routes[pathname]());
-}
+};
+
+firebase.auth().onAuthStateChanged((user) => {
+  if (user) {
+    onNavigate('/home');
+    // ...
+  } else {
+    onNavigate('/');
+  }
+});
 
 window.onpopstate = () => {
   while (rootDiv.firstChild) {
