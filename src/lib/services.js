@@ -33,13 +33,12 @@ export const loginWithEmail = (email, pass, functionRedirect) => {
     // Signed in
       const user = userCredential.user;
       Swal.fire({
-        title: 'Éxito',
-        text: `Bienvenida ${user.email}`,
+        title: 'Hola',
+        text: `Bienvenidx ${user.displayName ? user.displayName : user.email}`,
         icon: 'success',
-        confirmButtonText: 'Continuar',
+        timer: 2000,
       });
       functionRedirect('/home');
-      console.log(user);
     // ...
     })
     .catch((error) => {
@@ -80,6 +79,12 @@ export const loginWithGoogle = () => {
 
 export const signOutApp = (functionRedirect) => {
   firebase.auth().signOut().then(() => {
+    Swal.fire({
+      title: 'Nos vemos',
+      text: 'Se ha cerrado tu sesión',
+      icon: 'info',
+      timer: 3000,
+    });
     functionRedirect('/');
   }).catch((error) => {
     const errorCode = error.code;

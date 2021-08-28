@@ -1,0 +1,102 @@
+[debug] [2021-08-28T00:22:17.264Z] ----------------------------------------------------------------------
+[debug] [2021-08-28T00:22:17.266Z] Command:       /Users/reloadercf/.nvm/versions/node/v10.24.1/bin/node /usr/local/bin/firebase deploy
+[debug] [2021-08-28T00:22:17.266Z] CLI Version:   9.16.5
+[debug] [2021-08-28T00:22:17.266Z] Platform:      darwin
+[debug] [2021-08-28T00:22:17.267Z] Node Version:  v10.24.1
+[debug] [2021-08-28T00:22:17.273Z] Time:          Fri Aug 27 2021 19:22:17 GMT-0500 (GMT-05:00)
+[debug] [2021-08-28T00:22:17.274Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2021-08-28T00:22:17.277Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2021-08-28T00:22:17.372Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-08-28T00:22:17.372Z] > authorizing via signed-in user (carlosmendoza@laboratoria.la)
+[debug] [2021-08-28T00:22:17.372Z] [iam] checking project red-social-coaches for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2021-08-28T00:22:17.374Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-08-28T00:22:17.375Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-08-28T00:22:17.545Z] <<< HTTP RESPONSE 200 {"date":"Sat, 28 Aug 2021 00:22:17 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","expires":"Mon, 01 Jan 1990 00:00:00 GMT","pragma":"no-cache","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-08-28T00:22:17.579Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/red-social-coaches:testIamPermissions  
+ {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2021-08-28T00:22:17.587Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2021-08-28T00:22:17.587Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[debug] [2021-08-28T00:22:17.912Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sat, 28 Aug 2021 00:22:17 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=210","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-08-28T00:22:17.914Z] > refreshing access token with scopes: []
+[debug] [2021-08-28T00:22:17.914Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-08-28T00:22:18.057Z] <<< HTTP RESPONSE 200 {"pragma":"no-cache","date":"Sat, 28 Aug 2021 00:22:18 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","expires":"Mon, 01 Jan 1990 00:00:00 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-08-28T00:22:18.086Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/red-social-coaches [none]
+[debug] [2021-08-28T00:22:18.301Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/red-social-coaches 200
+[debug] [2021-08-28T00:22:18.301Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/red-social-coaches {"projectId":"red-social-coaches","projectNumber":"489293961166","displayName":"red-social-coaches","name":"projects/red-social-coaches","resources":{"hostingSite":"red-social-coaches","storageBucket":"red-social-coaches.appspot.com","locationId":"us-central"},"state":"ACTIVE"}
+[info] 
+[info] === Deploying to 'red-social-coaches'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2021-08-28T00:22:18.305Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-08-28T00:22:18.305Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-08-28T00:22:18.449Z] <<< HTTP RESPONSE 200 {"expires":"Mon, 01 Jan 1990 00:00:00 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","pragma":"no-cache","date":"Sat, 28 Aug 2021 00:22:18 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-08-28T00:22:18.478Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/red-social-coaches/versions  
+ {"config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2021-08-28T00:22:19.396Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sat, 28 Aug 2021 00:22:19 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] i  hosting[red-social-coaches]: beginning deploy... 
+[info] i  hosting[red-social-coaches]: found 16 files in src 
+[debug] [2021-08-28T00:22:19.831Z] > refreshing access token with scopes: []
+[debug] [2021-08-28T00:22:19.832Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-08-28T00:22:19.835Z] [hosting] hash cache [c3Jj] stored for 16 files
+[debug] [2021-08-28T00:22:19.835Z] [hosting][hash queue][FINAL] {"max":412,"min":1,"avg":42.375,"active":0,"complete":16,"success":16,"errored":0,"retried":0,"total":16,"elapsed":421}
+[debug] [2021-08-28T00:22:19.968Z] <<< HTTP RESPONSE 200 {"date":"Sat, 28 Aug 2021 00:22:20 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","pragma":"no-cache","expires":"Mon, 01 Jan 1990 00:00:00 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-08-28T00:22:19.996Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/sites/red-social-coaches/versions/23b019abb80c23b9:populateFiles [none]
+[debug] [2021-08-28T00:22:19.996Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/sites/red-social-coaches/versions/23b019abb80c23b9:populateFiles {"files":{"/assets/header.jpeg":"136cf9c942dec38cd1f9ec8d6a5c8235c83a822fac6aa07d35db456a192ee6e6","/lib/secret.js":"41f28a49487336a4fab95c050e832c3f20f3dbdb652fe6b39696433eb1eba771","/404.html":"05cbc6f94d7a69ce2e29646eab13be2c884e61ba93e3094df5028866876d18b3","/index.html":"7d4bc7eee7dc9a1d0f4396f164256af495d8af56f3dff1ef01999803f56ba887","/style.css":"57f63e2dfd2dc70807671ae07306aa70261f71dd6d5522e5615a306b4f916ac8","/main.js":"2580c2a913ef398acebf81482fe42bc1fe2770f648f293c5d90a8aa5d64ed06f","/components/Signup.js":"7763861426a9eb7571883a61b713c2a7445b77736318d21243a54e0c09ca820b","/assets/google.png":"56b8e0f590af67947bdb77666cc9957f3cd2ee09f86b76018bc13b623334fb1e","/components/Welcome.js":"01a7083e7a865148852a41dbe6c74798f7c6e0234882fa085a14c3bd5145ba5f","/components/Login.js":"84e71a1d01e4a37796efb9c599e4d6c1eec9c958a55147d299178648368bdef5","/components/Utils/NavBar.js":"c0268f96f2c81fc266320516951b0a584953cee27c37d3598e4eddcc8907a888","/components/home/Home.js":"44c4f609b2cd3430696d40e13ee6b66560badd151c773030e20661646708210b","/components/home/NavBar.js":"daa1196cf486aed6670e6c65537b2e46a8804da531029bb7fc17a6bfe7a6f19f","/components/home/Publish.js":"b7dba65821262c628b09e035acf8c428a1a78f41548aa98d89e1e050af2bb29b","/lib/services.js":"fc8a2c02e3fb3c6a3dfc7084f67afb11568c6d4cd8a6d791ffe7c8400db2eea2","/assets/header.jpg":"ac0c0313978f99ff0fdfec9edac9efe0a7dbd514d53f7a736bbd467358df820b"}}
+[debug] [2021-08-28T00:22:20.625Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/sites/red-social-coaches/versions/23b019abb80c23b9:populateFiles 200
+[debug] [2021-08-28T00:22:20.625Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/sites/red-social-coaches/versions/23b019abb80c23b9:populateFiles {"uploadRequiredHashes":["84e71a1d01e4a37796efb9c599e4d6c1eec9c958a55147d299178648368bdef5","56b8e0f590af67947bdb77666cc9957f3cd2ee09f86b76018bc13b623334fb1e","fc8a2c02e3fb3c6a3dfc7084f67afb11568c6d4cd8a6d791ffe7c8400db2eea2","2580c2a913ef398acebf81482fe42bc1fe2770f648f293c5d90a8aa5d64ed06f","57f63e2dfd2dc70807671ae07306aa70261f71dd6d5522e5615a306b4f916ac8","daa1196cf486aed6670e6c65537b2e46a8804da531029bb7fc17a6bfe7a6f19f"],"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/red-social-coaches/versions/23b019abb80c23b9/files"}
+[debug] [2021-08-28T00:22:20.635Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/red-social-coaches/versions/23b019abb80c23b9/files/84e71a1d01e4a37796efb9c599e4d6c1eec9c958a55147d299178648368bdef5 [none]
+[debug] [2021-08-28T00:22:20.635Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/red-social-coaches/versions/23b019abb80c23b9/files/84e71a1d01e4a37796efb9c599e4d6c1eec9c958a55147d299178648368bdef5 [stream]
+[debug] [2021-08-28T00:22:20.637Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/red-social-coaches/versions/23b019abb80c23b9/files/56b8e0f590af67947bdb77666cc9957f3cd2ee09f86b76018bc13b623334fb1e [none]
+[debug] [2021-08-28T00:22:20.637Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/red-social-coaches/versions/23b019abb80c23b9/files/56b8e0f590af67947bdb77666cc9957f3cd2ee09f86b76018bc13b623334fb1e [stream]
+[debug] [2021-08-28T00:22:20.639Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/red-social-coaches/versions/23b019abb80c23b9/files/fc8a2c02e3fb3c6a3dfc7084f67afb11568c6d4cd8a6d791ffe7c8400db2eea2 [none]
+[debug] [2021-08-28T00:22:20.640Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/red-social-coaches/versions/23b019abb80c23b9/files/fc8a2c02e3fb3c6a3dfc7084f67afb11568c6d4cd8a6d791ffe7c8400db2eea2 [stream]
+[debug] [2021-08-28T00:22:20.641Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/red-social-coaches/versions/23b019abb80c23b9/files/2580c2a913ef398acebf81482fe42bc1fe2770f648f293c5d90a8aa5d64ed06f [none]
+[debug] [2021-08-28T00:22:20.642Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/red-social-coaches/versions/23b019abb80c23b9/files/2580c2a913ef398acebf81482fe42bc1fe2770f648f293c5d90a8aa5d64ed06f [stream]
+[debug] [2021-08-28T00:22:20.645Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/red-social-coaches/versions/23b019abb80c23b9/files/57f63e2dfd2dc70807671ae07306aa70261f71dd6d5522e5615a306b4f916ac8 [none]
+[debug] [2021-08-28T00:22:20.645Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/red-social-coaches/versions/23b019abb80c23b9/files/57f63e2dfd2dc70807671ae07306aa70261f71dd6d5522e5615a306b4f916ac8 [stream]
+[debug] [2021-08-28T00:22:20.648Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/red-social-coaches/versions/23b019abb80c23b9/files/daa1196cf486aed6670e6c65537b2e46a8804da531029bb7fc17a6bfe7a6f19f [none]
+[debug] [2021-08-28T00:22:20.649Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/red-social-coaches/versions/23b019abb80c23b9/files/daa1196cf486aed6670e6c65537b2e46a8804da531029bb7fc17a6bfe7a6f19f [stream]
+[debug] [2021-08-28T00:22:20.662Z] [hosting][populate queue][FINAL] {"max":804,"min":804,"avg":804,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":831}
+[debug] [2021-08-28T00:22:20.662Z] [hosting] uploads queued: 6
+[debug] [2021-08-28T00:22:21.446Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/red-social-coaches/versions/23b019abb80c23b9/files/fc8a2c02e3fb3c6a3dfc7084f67afb11568c6d4cd8a6d791ffe7c8400db2eea2 200
+[debug] [2021-08-28T00:22:21.447Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/red-social-coaches/versions/23b019abb80c23b9/files/fc8a2c02e3fb3c6a3dfc7084f67afb11568c6d4cd8a6d791ffe7c8400db2eea2 [stream]
+[debug] [2021-08-28T00:22:21.448Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/red-social-coaches/versions/23b019abb80c23b9/files/daa1196cf486aed6670e6c65537b2e46a8804da531029bb7fc17a6bfe7a6f19f 200
+[debug] [2021-08-28T00:22:21.448Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/red-social-coaches/versions/23b019abb80c23b9/files/daa1196cf486aed6670e6c65537b2e46a8804da531029bb7fc17a6bfe7a6f19f [stream]
+[debug] [2021-08-28T00:22:21.449Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/red-social-coaches/versions/23b019abb80c23b9/files/2580c2a913ef398acebf81482fe42bc1fe2770f648f293c5d90a8aa5d64ed06f 200
+[debug] [2021-08-28T00:22:21.450Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/red-social-coaches/versions/23b019abb80c23b9/files/2580c2a913ef398acebf81482fe42bc1fe2770f648f293c5d90a8aa5d64ed06f [stream]
+[debug] [2021-08-28T00:22:21.452Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/red-social-coaches/versions/23b019abb80c23b9/files/56b8e0f590af67947bdb77666cc9957f3cd2ee09f86b76018bc13b623334fb1e 200
+[debug] [2021-08-28T00:22:21.452Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/red-social-coaches/versions/23b019abb80c23b9/files/56b8e0f590af67947bdb77666cc9957f3cd2ee09f86b76018bc13b623334fb1e [stream]
+[debug] [2021-08-28T00:22:21.454Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/red-social-coaches/versions/23b019abb80c23b9/files/57f63e2dfd2dc70807671ae07306aa70261f71dd6d5522e5615a306b4f916ac8 200
+[debug] [2021-08-28T00:22:21.454Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/red-social-coaches/versions/23b019abb80c23b9/files/57f63e2dfd2dc70807671ae07306aa70261f71dd6d5522e5615a306b4f916ac8 [stream]
+[debug] [2021-08-28T00:22:21.455Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/red-social-coaches/versions/23b019abb80c23b9/files/84e71a1d01e4a37796efb9c599e4d6c1eec9c958a55147d299178648368bdef5 200
+[debug] [2021-08-28T00:22:21.455Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/red-social-coaches/versions/23b019abb80c23b9/files/84e71a1d01e4a37796efb9c599e4d6c1eec9c958a55147d299178648368bdef5 [stream]
+[debug] [2021-08-28T00:22:21.456Z] [hosting][upload queue][FINAL] {"max":831,"min":815,"avg":822,"active":0,"complete":6,"success":6,"errored":0,"retried":0,"total":6,"elapsed":831}
+[info] ✔  hosting[red-social-coaches]: file upload complete 
+[debug] [2021-08-28T00:22:21.457Z] [hosting] deploy completed after 2059ms
+[debug] [2021-08-28T00:22:21.461Z] [
+  {
+    "config": {
+      "public": "src",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "site": "red-social-coaches"
+    },
+    "site": "red-social-coaches",
+    "version": "sites/red-social-coaches/versions/23b019abb80c23b9"
+  }
+]
+[info] i  hosting[red-social-coaches]: finalizing version... 
+[debug] [2021-08-28T00:22:21.462Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-08-28T00:22:21.463Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-08-28T00:22:21.628Z] <<< HTTP RESPONSE 200 {"pragma":"no-cache","cache-control":"no-cache, no-store, max-age=0, must-revalidate","expires":"Mon, 01 Jan 1990 00:00:00 GMT","date":"Sat, 28 Aug 2021 00:22:21 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-08-28T00:22:21.657Z] >>> HTTP REQUEST PATCH https://firebasehosting.googleapis.com/v1beta1/sites/red-social-coaches/versions/23b019abb80c23b9?updateMask=status  
+ {"status":"FINALIZED"}

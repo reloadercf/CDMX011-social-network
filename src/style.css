@@ -176,3 +176,18 @@ height: 100px;
     width:40px;
     height:40px;
 }
+
+.container-numbers{
+    padding-left:70%
+}
+
+.green-number{
+    color:#128C7E;
+}
+.blue-number{
+    color:#00b7ff;
+}
+
+.red-number{
+    color:rgb(255, 0, 106);
+}
