@@ -2,7 +2,7 @@
 import firebase from './secret.js';
 import today from './today.js';
 
-const db = firebase.firestore();
+export const db = firebase.firestore();
 
 export const getUser = () => firebase.auth().currentUser;
 
@@ -33,3 +33,13 @@ export const createPost = (uid, text) => {
       });
     });
 };
+
+export const getPost = () => {
+  const docRef = db.collection('publications').orderBy('timer_server');
+  docRef.get().then((doc) => {
+    console.log(doc.docs);
+  }).catch((error) => {
+    console.log('Error getting document:', error);
+  });
+};
+export const realTimePost = () => db.collection('publications').orderBy('timer_server', 'desc');

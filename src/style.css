@@ -184,10 +184,19 @@ height: 100px;
 .green-number{
     color:#128C7E;
 }
-.blue-number{
-    color:#00b7ff;
-}
 
 .red-number{
     color:rgb(255, 0, 106);
+}
+
+.all-poststes{
+    width:500px
+}
+
+.child-post{
+    display: flex;
+    flex-wrap: wrap;
+    width:300px;
+    text-align: justify;
+    text-justify: inter-word;
 }
