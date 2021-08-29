@@ -30,6 +30,12 @@ footer {
     background-color:black;
     text-align: center;
   }
+
+hr{
+    border-top: 1px black solid;
+    width:70%;
+}
+
 .navbar {
     position: fixed;
     left: 0;
@@ -163,6 +169,7 @@ footer {
 .img-profile{
     width:50px;
     height:50px;
+    padding: 5px;
     border-image-slice: 30%;
 }
 
@@ -190,13 +197,44 @@ height: 100px;
 }
 
 .all-poststes{
-    width:500px
+    display: flex;
+    flex-direction:column;
+    width:100%;
+}
+
+.article-post{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+    align-items:center;
 }
 
 .child-post{
     display: flex;
-    flex-wrap: wrap;
-    width:300px;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.div-text{
     text-align: justify;
     text-justify: inter-word;
+}
+
+.info-post{
+    display: flex;
+    width: 100%;
+    justify-content:space-between;
+}
+
+.div-likes-post{
+    display: flex;
+}
+
+.img-like{
+    width:15px;
+    height: 15px;
+}
+
+.span-nlikes{
+    color:rgb(255, 0, 106);
 }

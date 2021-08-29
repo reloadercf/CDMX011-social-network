@@ -27,7 +27,7 @@ export const Publish = () => {
 
   textArea.placeholder = 'Comparte algo';
   nameProfile.textContent = `${user ? user.displayName ? user.displayName : user.email : ''}`;
-  imgProfile.setAttribute('src', 'https://m.vanguardia.com/cursos/assets/images/profile/logodefault.jpg');
+  imgProfile.setAttribute('src', `${user ? user.photoURL ? user.photoURL : 'https://thumbs.dreamstime.com/b/default-avatar-profile-icon-vector-social-media-user-symbol-image-default-avatar-profile-icon-vector-social-media-user-symbol-209498286.jpg' : 'https://thumbs.dreamstime.com/b/default-avatar-profile-icon-vector-social-media-user-symbol-image-default-avatar-profile-icon-vector-social-media-user-symbol-209498286.jpg'}`);
   imgAddFile.setAttribute('src', 'https://img2.freepng.es/20180711/kl/kisspng-computer-icons-email-attachment-attach-5b46c98c486db2.9918158215313657722967.jpg');
   button.textContent = 'Publicar';
 

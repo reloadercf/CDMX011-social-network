@@ -10,7 +10,7 @@ const dateClock = () => {
       hourMinut.push(`${d.getMinutes()} pm`);
     }
   } else {
-    hourMinut.push(d.getHours() - 10);
+    hourMinut.push(d.getHours());
     if (d.getMinutes() < 10) {
       hourMinut.push(`0${d.getMinutes()} am`);
     } else {
