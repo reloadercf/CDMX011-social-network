@@ -4,7 +4,7 @@ import today from './today.js';
 
 export const db = firebase.firestore();
 
-export const getUser = () => firebase.auth().currentUser;
+export const getMyUser = () => firebase.auth().currentUser;
 
 export const createPost = (uid, text) => {
   db.collection('publications').add({

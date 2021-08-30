@@ -1,4 +1,5 @@
 import { realTimePost } from '../../lib/post.js';
+import { getProcfileId } from '../../lib/procfile.js';
 
 export const AllPost = () => {
   const postNode = document.createElement('div');
@@ -38,12 +39,24 @@ export const AllPost = () => {
       datePost.classList.add('date-post');
       namePost.classList.add('name-post');
 
-      imageUser.setAttribute('src', 'https://thumbs.dreamstime.com/b/default-avatar-profile-icon-vector-social-media-user-symbol-image-default-avatar-profile-icon-vector-social-media-user-symbol-209498286.jpg');
       imgLikePost.setAttribute('src', 'https://www.pikpng.com/pngl/b/328-3283462_love-heart-reaction-facebook-stiker-red-instagram-asana.png');
       divText.textContent = doc.element.text;
       spanNlikes.textContent = doc.element.likes.length;
       datePost.textContent = doc.element.date_public;
-      namePost.textContent = 'Nombre de usuarix';
+
+      getProcfileId(doc.element.uid)
+        .then((user) => {
+          if (user.exists) {
+            const { displayName, email, photoURL } = user.data();
+            imageUser.setAttribute('src', `${photoURL !== 'null' ? photoURL : 'https://w7.pngwing.com/pngs/601/312/png-transparent-social-media-avatar-graphy-digital-media-profile-blue-text-logo.png'}`);
+            namePost.textContent = `${displayName !== 'null' ? displayName : email}`;
+          } else {
+            imageUser.setAttribute('src', 'https://thumbs.dreamstime.com/b/default-avatar-profile-icon-vector-social-media-user-symbol-image-default-avatar-profile-icon-vector-social-media-user-symbol-209498286.jpg');
+            namePost.textContent = 'usuarix';
+          }
+        }).catch((error) => {
+          console.log('Error getting document:', error);
+        });
 
       divArticle.appendChild(divText);
       divArticle.appendChild(imageUser);

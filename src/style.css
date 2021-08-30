@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@700&display=swap');
 
 body{
     margin: 0;
@@ -176,6 +177,7 @@ hr{
 .text-area{
 width: 65%;
 height: 100px;
+font-family: 'Raleway', sans-serif;
 }
 
 .img-add-file{
@@ -216,14 +218,26 @@ height: 100px;
 }
 
 .div-text{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
     text-align: justify;
     text-justify: inter-word;
+    padding-right: 10px;
+    background-color: rgba(0, 0, 0, 0.082);
+    width: 300px;
+    height: 100px;
+    font-family: 'Raleway', sans-serif;
+    size:3rem;
 }
 
 .info-post{
     display: flex;
+    align-items:center;
     width: 100%;
     justify-content:space-between;
+    
 }
 
 .div-likes-post{
@@ -237,4 +251,15 @@ height: 100px;
 
 .span-nlikes{
     color:rgb(255, 0, 106);
+}
+
+.date-post{
+    font-family: 'Raleway', sans-serif;
+    color: rgb(0, 89, 255);
+    font-size: smaller;
+}
+
+.name-post{
+    font-family: 'Noto Sans JP', sans-serif;
+    size: 1rem;
 }

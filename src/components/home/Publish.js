@@ -1,9 +1,9 @@
 /* eslint-disable eqeqeq */
 /* eslint-disable no-undef */
-import { getUser, createPost } from '../../lib/post.js';
+import { getMyUser, createPost } from '../../lib/post.js';
 
 export const Publish = () => {
-  const user = getUser();
+  const user = getMyUser();
 
   const publishContainer = document.createElement('div');
   const nameProfile = document.createElement('p');
@@ -27,7 +27,7 @@ export const Publish = () => {
 
   textArea.placeholder = 'Comparte algo';
   nameProfile.textContent = `${user ? user.displayName ? user.displayName : user.email : ''}`;
-  imgProfile.setAttribute('src', `${user ? user.photoURL ? user.photoURL : 'https://thumbs.dreamstime.com/b/default-avatar-profile-icon-vector-social-media-user-symbol-image-default-avatar-profile-icon-vector-social-media-user-symbol-209498286.jpg' : 'https://thumbs.dreamstime.com/b/default-avatar-profile-icon-vector-social-media-user-symbol-image-default-avatar-profile-icon-vector-social-media-user-symbol-209498286.jpg'}`);
+  imgProfile.setAttribute('src', `${user ? user.photoURL ? user.photoURL : 'https://w7.pngwing.com/pngs/601/312/png-transparent-social-media-avatar-graphy-digital-media-profile-blue-text-logo.png' : 'https://thumbs.dreamstime.com/b/default-avatar-profile-icon-vector-social-media-user-symbol-image-default-avatar-profile-icon-vector-social-media-user-symbol-209498286.jpg'}`);
   imgAddFile.setAttribute('src', 'https://img2.freepng.es/20180711/kl/kisspng-computer-icons-email-attachment-attach-5b46c98c486db2.9918158215313657722967.jpg');
   button.textContent = 'Publicar';
 

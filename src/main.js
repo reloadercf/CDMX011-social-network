@@ -2,6 +2,7 @@ import { Welcome } from './components/Welcome.js';
 import { Signup } from './components/Signup.js';
 import { Login } from './components/Login.js';
 import { Home } from './components/home/Home.js';
+import { setUserProcfile } from './lib/procfile.js';
 
 const rootDiv = document.getElementById('root');
 
@@ -28,7 +29,7 @@ export const onNavigate = (pathname) => {
 firebase.auth().onAuthStateChanged((user) => {
   if (user) {
     onNavigate('/home');
-    // ...
+    setUserProcfile(user);
   } else {
     onNavigate('/');
   }
