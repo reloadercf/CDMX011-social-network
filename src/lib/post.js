@@ -43,3 +43,20 @@ export const getPost = () => {
   });
 };
 export const realTimePost = () => db.collection('publications').orderBy('timer_server', 'desc');
+
+export const updatePost = (document, text, redirect) => {
+  const post = db.collection('publications').doc(document);
+  return post.update({
+    text,
+    timer_server: firebase.firestore.FieldValue.serverTimestamp(),
+
+  })
+    .then(() => {
+      console.log('Document successfully updated!');
+      redirect('/home');
+    })
+    .catch((error) => {
+      // The document probably doesn't exist.
+      console.error('Error updating document: ', error);
+    });
+};

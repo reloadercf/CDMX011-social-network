@@ -33,8 +33,9 @@ footer {
   }
 
 hr{
-    border-top: 1px black solid;
-    width:70%;
+    border-top: 1px rgb(0, 0, 0) solid;
+    width:80%;
+    margin-bottom: 50px;
 }
 
 .navbar {
@@ -230,10 +231,12 @@ font-family: 'Raleway', sans-serif;
     height: 100px;
     font-family: 'Raleway', sans-serif;
     size:3rem;
+    margin:5px;
 }
 
 .info-post{
     display: flex;
+    flex-direction:column;
     align-items:center;
     width: 100%;
     justify-content:space-between;
@@ -262,4 +265,16 @@ font-family: 'Raleway', sans-serif;
 .name-post{
     font-family: 'Noto Sans JP', sans-serif;
     size: 1rem;
+}
+.child-info-name{
+    display: flex;
+    width: 100%;
+    justify-content:space-around;
+    margin: 5px;
+}
+.child-info-post{
+    display: flex;
+    width: 100%;
+    justify-content: right;
+    align-items:center;
 }

@@ -14,6 +14,7 @@ export const Publish = () => {
   const containerNumbers = document.createElement('div');
   const numbers = document.createElement('div');
   const button = document.createElement('button');
+  const divEditPublic = document.createElement('div');
 
   publishContainer.classList.add('publish-container');
   nameProfile.classList.add('name-profile');
@@ -24,6 +25,7 @@ export const Publish = () => {
   button.classList.add('button-primary');
   numbers.classList.add('characters-numbers');
   containerNumbers.classList.add('container-numbers');
+  divEditPublic.classList.add('div-edit-public');
 
   textArea.placeholder = 'Comparte algo';
   nameProfile.textContent = `${user ? user.displayName ? user.displayName : user.email : ''}`;
@@ -69,7 +71,8 @@ export const Publish = () => {
   publishContainer.appendChild(shareContainer);
   containerNumbers.appendChild(numbers);
   publishContainer.appendChild(containerNumbers);
-  publishContainer.appendChild(button);
+  divEditPublic.appendChild(button);
+  publishContainer.appendChild(divEditPublic);
 
   textArea.addEventListener('keyup', () => {
     const elementNumber = document.querySelector('.container-numbers');
