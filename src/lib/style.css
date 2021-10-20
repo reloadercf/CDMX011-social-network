@@ -1,0 +1,16 @@
+
+body {
+    margin:0px; padding:0px; 
+    background-color:#131211;
+}
+
+.Home { 
+    background-image: url(imagenes/fondo.jpeg);
+    color: green;
+    font-size: 40px;
+}
+.btnRegister{
+    color:pink;
+    height: 80px;
+    width: 40px;
+}
