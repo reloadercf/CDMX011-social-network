@@ -2,15 +2,29 @@
 import { onNavigate } from '../main.js';
 
 export const Login = () => {
-  const HomeDiv = document.createElement('div');
-  HomeDiv.textContent = 'Bienvenido al registro';
-  const buttonHome = document.createElement('button');
+  const loginDiv = document.createElement('div');
+  loginDiv.className = 'welcomDiv';
+  loginDiv.textContent = 'Bienvenido al inicio de sesión';
 
-  buttonHome.textContent = 'Regresar al Home';
+  const inputCorreo = document.createElement('input');
+  inputCorreo.setAttribute('placeholder', 'corero electronico');
+  inputCorreo.className = 'inputCorreo';
 
-  buttonHome.addEventListener('click', () => onNavigate('/'));
+  const inputContraseña = document.createElement('input');
+  inputContraseña.setAttribute('placeholder', 'constraseña');
+  inputContraseña.className = 'inputContraseña';
 
-  HomeDiv.appendChild(buttonHome);
+  const btnIniciarLogin = document.createElement('button');
+  btnIniciarLogin.textContent = 'Iniciar Sesión';
+  btnIniciarLogin.className = 'btnIniciarLogin';
 
-  return HomeDiv;
+  const buttonHomeLogin = document.createElement('button');
+  buttonHomeLogin.className = 'btnHomeLogin';
+  buttonHomeLogin.textContent = 'Regresar al Home';
+
+  buttonHomeLogin.addEventListener('click', () => onNavigate('/'));
+
+  loginDiv.append(inputCorreo, inputContraseña, btnIniciarLogin, buttonHomeLogin);
+
+  return loginDiv;
 };

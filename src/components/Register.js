@@ -3,15 +3,24 @@ import { onNavigate } from '../main.js';
 
 export const Register = () => {
   const HomeDiv = document.createElement('div');
+  HomeDiv.className = 'welcomRegistro';
   HomeDiv.textContent = 'Bienvenido al registro';
 
-  const buttonHome = document.createElement('button');
+  const inputCorreoRegister = document.createElement('input');
+  inputCorreoRegister.setAttribute('placeholder', 'Nombre');
+  inputCorreoRegister.className = 'inputCorreoRegister';
 
-  buttonHome.textContent = 'Regresar al Home';
+  const inputContraseña = document.createElement('input');
+  inputContraseña.setAttribute('placeholder', 'Apellido');
+  inputContraseña.className = 'inputContraseñaRegister';
 
-  buttonHome.addEventListener('click', () => onNavigate('/'));
+  const buttonRegisterHome = document.createElement('button');
+  buttonRegisterHome.className = 'btnRegisterHome';
+  buttonRegisterHome.textContent = 'Regresar al Home';
 
-  HomeDiv.appendChild(buttonHome);
+  buttonRegisterHome.addEventListener('click', () => onNavigate('/'));
+
+  HomeDiv.append(buttonRegisterHome, inputCorreoRegister, inputContraseña);
 
   return HomeDiv;
 };

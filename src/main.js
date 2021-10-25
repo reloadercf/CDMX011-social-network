@@ -17,15 +17,16 @@ const routes = {
 };
 
 export const onNavigate = (pathname) => {
-  window.history.pushState(
+  window.history.pushState( // aquí anexamos un registro en la sesión de nuestro navegador
     {},
     pathname,
     window.location.origin + pathname,
   );
+  //  aquí temovemos nuestro primer elemento
   while (rootDiv.firstChild) {
     rootDiv.removeChild(rootDiv.firstChild);
   }
-
+  //  aquí insertamos el nuevo elemento
   rootDiv.appendChild(routes[pathname]());
 };
 
