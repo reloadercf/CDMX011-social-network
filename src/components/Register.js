@@ -1,4 +1,5 @@
-// eslint-disable-next-line import/no-cycle
+/* eslint-disable max-len */
+/* eslint-disable import/no-cycle */
 import { onNavigate } from '../main.js';
 
 export const Register = () => {
@@ -6,13 +7,21 @@ export const Register = () => {
   HomeDiv.className = 'welcomRegistro';
   HomeDiv.textContent = 'Bienvenido al registro';
 
-  const inputCorreoRegister = document.createElement('input');
-  inputCorreoRegister.setAttribute('placeholder', 'Nombre');
-  inputCorreoRegister.className = 'inputCorreoRegister';
+  const inputNombreUser = document.createElement('input');
+  inputNombreUser.setAttribute('placeholder', 'Nombre Usuario');
+  inputNombreUser.className = 'inputNombreUser';
 
-  const inputContraseña = document.createElement('input');
-  inputContraseña.setAttribute('placeholder', 'Apellido');
-  inputContraseña.className = 'inputContraseñaRegister';
+  const inputCorreoRegister = document.createElement('input');
+  inputCorreoRegister.setAttribute('placeholder', 'Correo Electronico');
+  inputCorreoRegister.className = ' inputCorreoRegister';
+
+  const inputContraseñaRegister = document.createElement('input');
+  inputContraseñaRegister.setAttribute('placeholder', 'Contraseña');
+  inputContraseñaRegister.className = 'inputContraseñaRegister';
+
+  const btnIniciarLoginRegister = document.createElement('button');
+  btnIniciarLoginRegister.textContent = 'Completa Registro';
+  btnIniciarLoginRegister.className = 'btnIniciarLoginRegister';
 
   const buttonRegisterHome = document.createElement('button');
   buttonRegisterHome.className = 'btnRegisterHome';
@@ -20,7 +29,7 @@ export const Register = () => {
 
   buttonRegisterHome.addEventListener('click', () => onNavigate('/'));
 
-  HomeDiv.append(buttonRegisterHome, inputCorreoRegister, inputContraseña);
+  HomeDiv.append(inputNombreUser, inputCorreoRegister, inputContraseñaRegister, btnIniciarLoginRegister, buttonRegisterHome);
 
   return HomeDiv;
 };

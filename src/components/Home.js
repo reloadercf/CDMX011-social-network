@@ -29,8 +29,8 @@ export const Home = () => {
   const div4 = document.createElement('div');
   div4.className = 'line4';
 
-  buttonRegister.addEventListener('click', () => onNavigate('/register'));
   buttonIniciar.addEventListener('click', () => onNavigate('/login'));
+  buttonRegister.addEventListener('click', () => onNavigate('/register'));
 
   HomeDiv.append(buttonRegister, buttonIniciar, div1, div2, div3, div4, divO, welcomDiv);
 

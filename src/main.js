@@ -1,3 +1,5 @@
+/* eslint-disable no-sequences */
+/* eslint-disable import/no-cycle */
 // Este es el punto de entrada de tu aplicacion
 
 // import { myFunction } from './lib/index.js';
@@ -7,6 +9,7 @@ import { Home } from './components/Home.js';
 import { Register } from './components/Register.js';
 // eslint-disable-next-line import/named
 // eslint-disable-next-line import/no-cycle
+// eslint-disable-next-line import/named
 import { Login } from './components/Login.js';
 
 const rootDiv = document.getElementById('root');
@@ -27,7 +30,7 @@ export const onNavigate = (pathname) => {
     rootDiv.removeChild(rootDiv.firstChild);
   }
   //  aquí insertamos el nuevo elemento
-  rootDiv.appendChild(routes[pathname]());
+  rootDiv.append(routes[pathname, Register]());
 };
 
 const component = routes[window.location.pathname];
