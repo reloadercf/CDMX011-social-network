@@ -1,6 +1,7 @@
+/* eslint-disable import/no-cycle */
 // eslint-disable-next-line import/no-cycle
-import { onNavigate } from '../main.js';
-import { loginB } from '../firebase';
+// import { onNavigate } from '../main.js';
+import { loginEmailPass } from '../lib/sesion.js';
 
 export const Login = () => {
   const loginDiv = document.createElement('div');
@@ -23,15 +24,10 @@ export const Login = () => {
   buttonHomeLogin.className = 'btnHomeLogin';
   buttonHomeLogin.textContent = 'Regresar al Home';
 
-  const email = inputCorreo.value;
-  const password = inputContraseña.value;
-
-  btnIniciarLogin.addEventListener('click', () => loginB(email, password));
-  buttonHomeLogin.addEventListener('click', () => onNavigate('/'));
+  btnIniciarLogin.addEventListener('click', () => loginEmailPass(inputCorreo.value, inputContraseña.value));
+  // buttonHomeLogin.addEventListener('click', () => onNavigate('/'));
 
   loginDiv.append(inputCorreo, inputContraseña, btnIniciarLogin, buttonHomeLogin);
 
   return loginDiv;
 };
-
-// Aquí va en consumo de las promesas de firebase

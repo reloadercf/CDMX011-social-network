@@ -11,12 +11,14 @@ import { Register } from './components/Register.js';
 // eslint-disable-next-line import/no-cycle
 // eslint-disable-next-line import/named
 import { Login } from './components/Login.js';
+import { Muro } from './components/Muro.js';
 
 const rootDiv = document.getElementById('root');
 const routes = {
   '/': Home,
   '/register': Register,
   '/login': Login,
+  '/Muro': Muro,
 };
 
 export const onNavigate = (pathname) => {

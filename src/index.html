@@ -4,25 +4,31 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" type="image/jpg" href="images/favicon.png">
+  <script src="https://kit.fontawesome.com/b433974680.js" crossorigin="anonymous"></script>
   <title>Document</title>
   <link rel="stylesheet"  href="style.css" />
 </head>
 <body>
   <!-- aquí creamos nuestro nuevo nodo y todo el comportamiendo de js va a estar reflejado aquí;cambiar,renderizar,mostrar,etc.-->
-  <div id= root>
+  <div id= root></div>
   
-  </div>
-  
-  <script defer src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+   <!--FIREBASE-->
+  <!-- El SDK de Firebase JS principal siempre es obligatorio y debe figurar primero -->
+  <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>
 
-  <script defer src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
-  <script defer src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
-  
-  // ...
-  
-  <script defer src="./init-firebase.js"></script>
+   <!-- TODO: agregue SDK para los productos de Firebase que desea usar
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+     <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-auth.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-firestore.js "></script>
+
   
   <script type="module" src="main.js"></script>
+  <footer> 2021 CicloVida x Alejandra Dlez y Katia Cuevas</footer>
   
 </body>
 </html>

@@ -1,7 +1,3 @@
-body {
-    
-   
-}
 .Home {
     background-image: url(imagenes/fondo.jpeg);
     background-size: 600px 736px;
@@ -238,4 +234,49 @@ footer {
     align-items: flex-end;
     text-align: center;
     justify-content: center;
+}
+/* Aquí va nuestro Muro  */
+.textoMuro{
+    background-color: rgb(63, 68, 63);
+    width: 414px;
+    height: 736px;
+    color: rgb(250, 250, 250);
+    font-size: 14px;
+    text-align: center;
+    padding: 60px;
+}
+.publicacion{
+    background-color: rgb(243, 243, 243);
+    font-size: 20px;
+    font-family: verdana;
+    color: black;
+    position: absolute;
+    width: 325px;
+    height: 38px;
+    left: 48px;
+    top: 200px;
+}
+.btnPublicar{
+    background-color: rgba(70, 187, 86, 0.226);
+    position: absolute;
+    width: 325px;
+    height: 38px;
+    left: 48px;
+    top: 250px;
+    border-radius: 12px;
+    border-color: rgba(35, 157, 128, 0.49);
+    color:white;
+    font-size: 15px   
+}
+.btnCerrarSesion{
+    background-color: rgba(255, 255, 255, 0.637);
+    position: absolute;
+    width: 325px;
+    height: 38px;
+    left: 48px;
+    top: 640px;
+    border-radius: 12px;
+    border-color: rgba(255, 255, 255, 0.49);
+    color:rgba(4, 36, 28, 0.49);;
+    font-size: 15px   
 }
