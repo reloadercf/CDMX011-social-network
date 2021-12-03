@@ -6,11 +6,13 @@ import { newRegister } from '../lib/sesion.js';
 export const Register = () => {
   const HomeDiv = document.createElement('div');
   HomeDiv.className = 'welcomRegistro';
-  HomeDiv.textContent = 'Bienvenido al registro';
 
-  // const inputNombreUser = document.createElement('input');
-  // inputNombreUser.setAttribute('placeholder', 'Nombre Usuario');
-  // inputNombreUser.className = 'inputNombreUser';
+  const textoRegister = document.createElement('div');
+  textoRegister.className = 'textoRegister';
+  textoRegister.textContent = 'Bienvenido al registro';
+
+  const inputsRegister = document.createElement('div');
+  inputsRegister.className = 'inputsRegister';
 
   const inputCorreoRegister = document.createElement('input');
   inputCorreoRegister.setAttribute('placeholder', 'Correo Electronico');
@@ -19,19 +21,19 @@ export const Register = () => {
   const inputContraseñaRegister = document.createElement('input');
   inputContraseñaRegister.setAttribute('placeholder', 'Contraseña');
   inputContraseñaRegister.className = 'inputContraseñaRegister';
+  inputsRegister.append(inputCorreoRegister, inputContraseñaRegister);
 
   const btnIniciarLoginRegister = document.createElement('button');
   btnIniciarLoginRegister.textContent = 'Registrate';
   btnIniciarLoginRegister.className = 'btnIniciarLoginRegister';
-
-  const buttonRegisterHome = document.createElement('button');
-  buttonRegisterHome.className = 'btnRegisterHome';
-  buttonRegisterHome.textContent = 'Regresar al Home';
-
   btnIniciarLoginRegister.addEventListener('click', () => newRegister(inputCorreoRegister.value, inputContraseñaRegister.value));
-  buttonRegisterHome.addEventListener('click', () => onNavigate('/'));
 
-  HomeDiv.append(inputCorreoRegister, inputContraseñaRegister, btnIniciarLoginRegister, buttonRegisterHome);
+  const btnHomeRegister = document.createElement('img');
+  btnHomeRegister.className = 'btnHomeRegister';
+  btnHomeRegister.src = './imagenes/home.png';
+  btnHomeRegister.addEventListener('click', () => onNavigate('/'));
+
+  HomeDiv.append(textoRegister, inputsRegister, btnIniciarLoginRegister, btnHomeRegister);
 
   return HomeDiv;
 };

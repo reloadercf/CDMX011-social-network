@@ -18,15 +18,34 @@ export const loginEmailPass = (email, password) => {
     // ...
     })
     .catch((error) => {
-      const errorMessage = error.message;
       alert('usuario no registrado');
+      const errorMessage = error.message;
       console.log(errorMessage);
     });
 };
 
-// REGISTRO DE USUARIO //
+// INICIO SESIÓN CON GOOGLE//
+export const sesionGoogle = () => {
+  const provider = new firebase.auth.GoogleAuthProvider();
+  const authGoogle = firebase.auth();
+  authGoogle
+    .signInWithPopup(provider)
+    .then(() => {
+    // /** @type {firebase.auth.OAuthCredential} */
+    //   const credential = result.credential;
 
-// Aquí va registerEmail, va a coneter un registro y contraseña y pasarlo
+      //   // This gives you a Google Access Token. You can use it to access the Google API.
+      //   const token = credential.accessToken;
+      //   // The signed-in user info.
+      //   const user = result.user;
+      // ...
+      onNavigate('/Muro');
+    }).catch((error) => {
+      console.log(error.message);
+    });
+};
+
+// REGISTRO DE USUARIO //
 // al evento igual que en login y console.log() en puntos claves de ¿que recibo?¿que hago?
 export const newRegister = (email, password) => {
   firebase.auth().createUserWithEmailAndPassword(email, password)
@@ -35,11 +54,9 @@ export const newRegister = (email, password) => {
       const user = userCredential.user;
       alert('bienvenido ususario');
       console.log(user);
-    // ...
     })
     .catch((error) => {
       const errorMessage = error.message;
       console.log(errorMessage);
-    // ..
     });
 };

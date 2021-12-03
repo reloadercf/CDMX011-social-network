@@ -14,6 +14,7 @@ import { Login } from './components/Login.js';
 import { Muro } from './components/Muro.js';
 
 const rootDiv = document.getElementById('root');
+// aquí estan mis rutas //
 const routes = {
   '/': Home,
   '/register': Register,
@@ -23,20 +24,21 @@ const routes = {
 
 export const onNavigate = (pathname) => {
   window.history.pushState( // aquí anexamos un registro en la sesión de nuestro navegador
-    {},
-    pathname,
-    window.location.origin + pathname,
+    {}, // es el objeto asociado al nuevo registo en el historial //
+    pathname, // contiene la ruta del url para la ubicacion //
+    window.location.origin + pathname, // aquí va la url del nuevo registro en el historial //
   );
-  //  aquí temovemos nuestro primer elemento
+  //  aquí movemos nuestro primer elemento creando un bucle //
   while (rootDiv.firstChild) {
-    rootDiv.removeChild(rootDiv.firstChild);
+    rootDiv.removeChild(rootDiv.firstChild); // aquí eliminamos el primer nodo hijo del DOM
   }
   //  aquí insertamos el nuevo elemento
-  rootDiv.append(routes[pathname, Register]());
+  rootDiv.appendChild(routes[pathname]());
 };
 
 const component = routes[window.location.pathname];
 
+// el evento popstate contendrá una copia del objeto de estado de la entrada de la historia //
 window.onpopstate = () => {
   while (rootDiv.firstChild) {
     rootDiv.removeChild(rootDiv.firstChild);

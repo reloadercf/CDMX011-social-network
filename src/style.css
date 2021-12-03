@@ -1,282 +1,341 @@
+body{
+    margin: 0px;
+    padding: 0px;
+}
+footer {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: 57px;
+    font-family:'Lucida Sans';
+    font-style: revert;
+    font-size: 13px;
+    color: #2a322d;
+    line-height: 27px;
+    text-align: center;
+    background-color: hsl(171deg 37% 55%);
+}
 .Home {
-    background-image: url(imagenes/fondo.jpeg);
-    background-size: 600px 736px;
-    border-radius: 12px;
+    background: linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,1)), url(imagenes/bileee.jpg); 
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
-    background-blend-mode: lighten;
-
-    font-size: 60px;
-    font-weight: bolder;
-    color: white;
-    width: 414px;
-    height: 736px;
+    background-attachment: fixed;
+    font-family: 'Montserrat', sans-serif;
+    margin: -13px;
+    min-height: 100vh;
 }
-.line1 {
-    height: 1px;
-    background: white;
-    position: absolute;
-    width: 340px;
-    left: 37px;
-    top: 125px;
+img.Home{
+    opacity: 5%;
 }
-.welcomDiv {
-    font-size: 25px;
-    font-weight: lighter;
-    color: white;
-    text-align: start;
-    padding: 10px;
-    font-family: Arial, Helvetica, sans-serif;
-    top: 120px;
-    width:230px;
-    position: absolute;
-}
-.line2 {
-    height: 1px;
-    background: white;
-    position: absolute;
-    width: 143px;
-    left: 230px;
-    top: 241px;
-}
-.buttonHomeLogin {
-    background-color: rgba(128, 189, 174, 0.49);
-    position: absolute;
-    width: 319px;
-    height: 38px;
-    left: 48px;
-    top: 00px;
-    border-radius: 12px;
-    border-color: rgba(35, 157, 128, 0.49);
-    color:white;
-    font-size: 15px;
+header{
+    background-color: rgb(42 46 30);
+    width: 100%;
+    height: 25.5vmin;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    padding: 1.3em 0;
+    background-image: url(imagenes/cicico.png);
+    background-repeat: no-repeat;
+    background-size: 139px, 92px;
+    background-position: top;
+    background-position-y: bottom;
 }
 .line3{
-    height: 1px;
-    background:  rgba(35, 157, 128, 0.49);
+    height: 3px;
+    background: rgb(98 183 170);
     position: absolute;
-    width: 110px;
+    width: 64px;
     left: 80px;
-    top: 457px;
+    top: 300px;
 }  
 .divO{
-    font-size: 29px;
-    top: 439px;
-    left: 198px;
+    font-size: 31px;
+    top: 284px;
+    left: 181px;
     position: absolute;
     font-style: italic;
     text-shadow:black -0.15em 0.15em;
 }
 
 .line4{
-    height: 1px;
-    background: rgb(35, 157, 128,0.49);
+    height: 3px;
+    background: rgb(98 183 170);
     position: absolute;
-    width: 110px;
+    width: 64px;
     left: 220px;
-    top: 457px;
+    top: 300px;
+}
+.linesO{
+    margin: 0px;
+}
+/*  edición de mis dos botones de home */
+.btnIniciar{
+    background-color: rgb(42 46 30);
+    width: 241px;
+    height: 54px;
+    color:white;
+    font-size: 20px;
+    font-family: 'Lucida Sans';
+    border-radius: 57px;
 }
 .btnRegistro{
-    background-color: rgba(35, 157, 128, 0.49);
-    position: absolute;
-    width: 325px;
-    height: 38px;
-    left: 48px;
-    top: 485px;
-    border-radius: 12px;
-    border-color: rgba(35, 157, 128, 0.49);
+    background-color: rgb(42 46 30);
+    width: 241px;
+    height: 54px;
     color:white;
-    font-size: 15px;
+    font-size: 20px;
+    font-family: 'Lucida Sans';
+    margin: 45px;
+    border-radius: 57px;
 }
-/* Aquí comienza mi inicio de sesión */
+.dosBotones{
+    display: flex;
+    width: 100%;
+    height: 75vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+}
+/* Aquí comienza mi edición de INICIO SESIÓN */
 .welcomLogin{
-    font-size: 55px;
-    font-weight: bolder;
-    color: rgb(21, 73, 33);
-    text-align: center;
-    padding: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgb(42 46 30); 
+    min-height: 100vh;
 }
-.btnIniciar{
-    background-color: rgba(35, 157, 128, 0.49);
-    position: absolute;
-    width: 325px;
-    height: 38px;
-    left: 48px;
-    top: 390px;
-    border-radius: 12px;
-    border-color: rgba(35, 157, 128, 0.49);
-    color:white;
-    font-size: 15px;
+.textoLogin{
+    font-size: 35px;
+    font-family: 'Lucida Sans';
+    font-weight: bolder;
+    color: rgb(98 183 170);
+    text-align: center;
+    margin: 40px;
+    width: 100%;
 }
 .inputCorreo{
-    position: absolute;
-    background-color: (160, 160, 160, 0.19);
-    width: 318px;
+    width: 298px;
     height: 38px;
     left: 49px;
     top: 200px;
     border-radius:12px; 
     font-family:Arial, helvetica, sans-serif;
     font-size: 15px; 
-  
+    text-align: center; 
 }
 .inputContraseña{
-    position: absolute;
-    width: 318px;
+    width: 298px;
     height: 38px;
     left: 49px;
     top: 270px; 
     border-radius:12px; 
     font-family:Arial, helvetica, sans-serif;
     font-size: 15px;
-
+    text-align: center;
+}
+.inputsLogin{
+    margin: 31px;
 }
 .btnIniciarLogin{
     background-color: rgba(35, 157, 128, 0.49);
-    position: absolute;
-    width: 325px;
-    height: 38px;
-    left: 48px;
-    top: 380px;
+    width: 250px;
+    height: 43px;
     border-radius: 12px;
     border-color: rgba(35, 157, 128, 0.49);
     color:white;
     font-size: 15px;
-}
-.btnHomeLogin{
-    background-color: rgba(35, 157, 128, 0.49);
-    position: absolute;
-    width: 325px;
-    height: 38px;
-    left: 48px;
-    top: 460px;
-    border-radius: 12px;
-    border-color: rgba(35, 157, 128, 0.49);
-    color:white;
-    font-size: 15px
+    margin: 10px;
 }
 
-/* Aquí comienza mi registro */
-.welcomRegistro{
-    font-size: 55px;
-    font-weight: bolder;
-    color: rgb(21, 73, 33);
-    text-align: center;
-    padding: 10px;
+.registerGoogle{
+    width: 46px;
+    height: 44px;
 }
-.inputNombreUser{
-    position: absolute;
-    width: 318px;
+.registerFb{
+    width: 46px;
+    height: 44px;
+}
+.iconsLogin{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 26px;
+    height: 50px;
+    width: 138px;
+    
+}
+.btnHomeLogin{
+    margin: 33px;
+}
+
+/* Aquí comienza mi edición de REGISTRO */
+.welcomRegistro{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgb(42 46 30); 
+    width:100% ;
+    height: 162.5vmin;
+    font-size: 35px;
+    font-family: 'Lucida Sans';
+    font-weight: bolder;
+    color: rgb(98 183 170);
+    text-align: center;
+}
+.textoRegister{
+    margin:40px;
+}
+.inputCorreoRegister{
+    width: 298px;
     height: 38px;
     left: 49px;
     top: 200px;
     border-radius:12px; 
     font-family:Arial, helvetica, sans-serif;
     font-size: 15px; 
-}
-.inputCorreoRegister{
-    position: absolute;
-    width: 318px;
-    height: 38px;
-    left: 49px;
-    top: 270px;
-    border-radius:12px; 
-    font-family:Arial, helvetica, sans-serif;
-    font-size: 15px; 
+    text-align: center;
 }
 .inputContraseñaRegister{
-    position: absolute;
-    width: 318px;
+    width: 298px;
     height: 38px;
     left: 49px;
-    top: 340px;
+    top: 270px; 
     border-radius:12px; 
     font-family:Arial, helvetica, sans-serif;
-    font-size: 15px; 
+    font-size: 15px;
+    text-align: center;
 }
-
+.inputsRegister{
+    margin: 31px;
+}
 .btnIniciarLoginRegister{
     background-color: rgba(35, 157, 128, 0.49);
-    position: absolute;
-    width: 325px;
-    height: 38px;
-    left: 48px;
-    top: 480px;
+    width: 250px;
+    height: 43px;
     border-radius: 12px;
     border-color: rgba(35, 157, 128, 0.49);
     color:white;
     font-size: 15px;
+    margin: 10px;
 }
 .btnRegisterHome{
-    background-color: rgba(35, 157, 128, 0.49);
-    position: absolute;
-    width: 325px;
-    height: 38px;
-    left: 48px;
-    top: 550px;
-    border-radius: 12px;
-    border-color: rgba(35, 157, 128, 0.49);
-    color:white;
-    font-size: 15px
+    margin: 33px;
 }
-footer {
-    position: absolute;
-    width: 315px;
-    height: 24px;
-    left: 60px;
-    top: 692px;
-    font-family:Arial, Helvetica, sans-serif;
-    font-style: normal;
-    font-weight: 300;
-    font-size: 12px;
-    color:rgba(35, 157, 128, 0.49);
-    line-height: 15px;
+/* Aquí va la edición del MURO  */
+.muroDiv{
     display: flex;
-    align-items: flex-end;
-    text-align: center;
+    align-items: center;
+    flex-direction: column;
     justify-content: center;
+    background-color: rgb(42 46 30); 
+    width:100% ;
+    height: 162.5vmin;
+    font-size: 35px;
+    font-family: 'Lucida Sans';
+    font-weight: bolder;
+    color: rgb(98 183 170);
+    text-align: center;
 }
-/* Aquí va nuestro Muro  */
 .textoMuro{
-    background-color: rgb(63, 68, 63);
-    width: 414px;
+    margin: 40px;
+    /* width: 414px;
     height: 736px;
-    color: rgb(250, 250, 250);
+    color: rgb(27, 26, 26);
     font-size: 14px;
     text-align: center;
-    padding: 60px;
+    padding: 60px; */
 }
 .publicacion{
     background-color: rgb(243, 243, 243);
     font-size: 20px;
     font-family: verdana;
+    text-align: center;
     color: black;
-    position: absolute;
-    width: 325px;
-    height: 38px;
-    left: 48px;
-    top: 200px;
+    width: 280px;
+    border: 3px solid rgb(243, 243, 243);
+    height: 52px;
+    margin: 22px;
 }
 .btnPublicar{
     background-color: rgba(70, 187, 86, 0.226);
-    position: absolute;
-    width: 325px;
+    width: 250px;
     height: 38px;
     left: 48px;
-    top: 250px;
+    top: 200px;
     border-radius: 12px;
     border-color: rgba(35, 157, 128, 0.49);
     color:white;
-    font-size: 15px   
+    font-size: 15px;
+    margin: 6px;   
 }
-.btnCerrarSesion{
+.btnHomeLogin{
+    margin: 33px;
+}
+/* puedes agregar btn "cerrar sesión" aquí */
+/* Aquí comienza mi edición de PUBLICACIÓN */
+.contenedorPublicacion{
+    background-color: rgb(253, 253, 253);
+    font-size: 20px;
+    font-family: verdana;
+    width: 320px;
+    display: flex;
+    height: 70vh;
+    overflow: auto;
+    flex-direction: column;
+    align-items: center;
+    margin: 12px;
+}
+.mostrarPub{
     background-color: rgba(255, 255, 255, 0.637);
-    position: absolute;
     width: 325px;
     height: 38px;
     left: 48px;
-    top: 640px;
+    top: 600px;
     border-radius: 12px;
     border-color: rgba(255, 255, 255, 0.49);
     color:rgba(4, 36, 28, 0.49);;
     font-size: 15px   
+}
+.divPost{
+    display: flex;
+    background-color: rgba(68, 64, 64, 0.377);
+    padding: 10px;
+    border: 5px solid rgb(175, 175, 175);
+    width: 250px;
+    margin-top: 10px;
+    justify-content: center;
+    color: rgb(243, 243, 243);
+}
+.btnEliminar{
+    display: flex;
+    text-align: center;
+    background-color: rgba(70, 187, 86, 0.226);
+    width: 47px;
+    height: 20px;
+    border-radius:6px;
+    border-color: rgba(35, 157, 128, 0.49);
+    color:rgb(3, 3, 3);
+    font-size: 10px   
+}
+.btnEditar{
+    display: flex;
+    text-align: center;
+    background-color: rgba(70, 187, 86, 0.226);
+    width: 47px;
+    height: 20px;
+    border-radius:6px;
+    border-color: rgba(35, 157, 128, 0.49);
+    color:rgb(3, 3, 3);
+    font-size: 10px   
+}
+.btnsPub{
+    margin: 0px;
 }
