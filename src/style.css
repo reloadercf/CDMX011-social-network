@@ -315,8 +315,6 @@ header{
     color: rgb(243, 243, 243);
 }
 .btnEliminar{
-    display: flex;
-    text-align: center;
     background-color: rgba(70, 187, 86, 0.226);
     width: 47px;
     height: 20px;
@@ -326,8 +324,6 @@ header{
     font-size: 10px   
 }
 .btnEditar{
-    display: flex;
-    text-align: center;
     background-color: rgba(70, 187, 86, 0.226);
     width: 47px;
     height: 20px;
